@@ -81,8 +81,7 @@ Ball.prototype.collisionDetect = function () {                 //增加小球之
 
       if (distance < this.size + balls[j].size) {
         balls[j].color = this.color = randomColor();
-        this.x += this.velX;
-        this.y += this.velY;
+        this.velX = -this.velX;
       }
     }
   }
